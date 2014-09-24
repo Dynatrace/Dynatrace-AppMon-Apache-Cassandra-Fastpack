@@ -12,21 +12,6 @@
 <link type="text/css" rel="stylesheet" href="css/print.css" media="print"/>
 </head>
 <body>
-<div class="container" style="min-width: 760px;">
-<div class="header block">
-<div class="header-left column span-6">
-</div>
-<div class="column span-18 header-right last">
-<h4>Apache Cassandra Fastpack</h4>
-</div>
-</div>
-<div class="block">
-<div class="toc column span-6 prepend-top">
-<h3>Table of Contents
-</h3>
-<ul class="toc">
-</ul>
-</div>
 <div id="65732667" class="content column span-18 last">
 <h1>Apache Cassandra Fastpack</h1>
 <div class="section-2" id="65732667_ApacheCassandraFastpack-Overview" >
