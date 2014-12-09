@@ -14,9 +14,9 @@ Cassandra Clients, Business Transactions a Template Profile and Dashboards.
 | Version | 1.0.0
 | dynaTrace Version | 4
 | Author | Michael Kopp
-| License | [dynaTrace BSD](attachments_5275722_2_dynaTraceBSD.txt)
+| License | [dynaTrace BSD](dynaTraceBSD.txt)
 | Support |[Not Supported ](https://community.compuwareapm.com/community/display/DL/Support+Levels#SupportLevels-Community)
-| FastPack Contents | [Fastpack Download](attachments_65962002_2_dynaTrace_Cassandra_FastPack.dtp) contains:
+| FastPack Contents | [Fastpack Download](dynaTrace_Cassandra_FastPack.dtp) contains:
 | | * Cassandra Performance Overview 
 | | * Template Profile 
 | | * Server and Client Sensors 
