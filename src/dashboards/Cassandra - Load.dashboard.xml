@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
+<!-- Manual changes can cause severe problems and system instability -->
+<!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
+<dynatrace version="4.0.0.2620" date="12/6/11 3:05 PM">
+  <dashboardconfig memento.version="4.0.0.2620" icon="com.dynatrace.diagnostics.sdk/default.gif" localizationenabled="false" sessiontype="live" locationassource="false" groupname="" authorname="admin" opendrilldowninnewdashboard="false" sessionid="Cassandra Template" bgcolor="255,255,255,255" modified="1970-01-01T01:00:00+0100" id="91648317-251b-45fa-82ae-a9741d8f1dfc" revision="00000000-0000-0000-8709-cacd74bec37b" source="server://mkopp" created="2011-09-07T09:12:11+0200" description="" name="Cassandra - Load" modifiedbyname="mkopp" locationascomparesource="false">
+    <reportconfig lines.per.table="100" enabled="true" print.legends="true" orientation="portrait" pagesize="A4" type="PDF" title="" override="false" levels.per.tree="10" description="" print.images="true" formatpdf="com.dynatrace.diagnostics.report.velocity.format.pdfrenderer" />
+    <filter>
+      <criterion completepurepath="true" type="agents" mode="all">
+        <textpattern enabled="true" name="agentname" type="contains" />
+        <textpattern enabled="true" name="agenthost" type="contains" />
+      </criterion>
+      <criterion excludeexternalsubpaths="false" type="api" mode="all" />
+      <criterion type="applications" mode="all" />
+      <criterion showrendering="true" isactive="true" shownetwork="true" showjavascript="true" type="browserpathtype" />
+      <criterion timerenabled="false" pageenabled="false" type="browsersectionfilter">
+        <timername>
+          <stringmatchpattern text="" match="contains" />
+        </timername>
+        <pageurl>
+          <stringmatchpattern text="" match="contains" />
+        </pageurl>
+      </criterion>
+      <criterion type="btm" />
+      <criterion isactive="true" analyzeserverpath="true" type="enduserpath" analyzeenduserpath="true" />
+      <criterion completepurepath="true" type="hosts" mode="all" />
+      <criterion severities="" statesmode="all" severitiesmode="all" states="" rulesmode="all" type="incident" />
+      <criterion type="purepaths" mode="all" />
+      <criterion showrendering="true" isactive="false" contenttypegroupsmode="all" javascripttriggersmode="all" shownetwork="true" showjavascript="true" type="riapurepathtype" requestcriterion="ALL" />
+      <criterion includemeasurename="true" includetestname="true" type="tests" teststatus="OK" />
+      <criterion enabled="false" filterbyid="false" type="threads" />
+      <criterion type="timeframe">
+        <timeframe type="Last 30min" />
+      </criterion>
+      <criterion type="visits">
+        <visitidset visitsidsetsize="0" />
+      </criterion>
+      <criterion type="webpage">
+        <textpattern enabled="true" name="timerName" type="contains" />
+        <textpattern enabled="true" name="pageContext" type="contains" />
+      </criterion>
+      <criterion type="webrequest">
+        <filteruripattern>
+          <stringmatchpattern text="" match="contains" />
+        </filteruripattern>
+        <filterquerypattern>
+          <stringmatchpattern text="" match="contains" />
+        </filterquerypattern>
+      </criterion>
+    </filter>
+    <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+    <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" descriptionfontsize="8" nameshow="true" clienttheme="DEFAULT" headertype="CUSTOM" namefontsize="10" descriptionshow="true" autoadjustfontsizes="false" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+    <dashboardlayout>
+      <portletfolder relationtype="LEFT" ratio="0.95" folderid="org.eclipse.ui.internal.ViewStack@b6a93c" selectionindex="-1" isplaceholder="true" relatedfolderid="DashboardLayout.blankArea" portletconfigorder="" />
+      <portletfolder relationtype="BOTTOM" ratio="0.7659328" folderid="org.eclipse.ui.internal.ViewStack@89e60f" selectionindex="-1" isplaceholder="true" relatedfolderid="org.eclipse.ui.internal.ViewStack@b6a93c" portletconfigorder="" />
+      <portletfolder relationtype="BOTTOM" ratio="0.5448343" folderid="org.eclipse.ui.internal.ViewStack@16dd8b5" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@89e60f" portletconfigorder="029d01c9-eff8-4048-90b2-194080232046">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.675" folderid="org.eclipse.ui.internal.ViewStack@12b00ae" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@16dd8b5" portletconfigorder="1aed2ab2-4965-4dbc-8865-77bc70a81fd3">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.5" folderid="org.eclipse.ui.internal.ViewStack@15f788" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@16dd8b5" portletconfigorder="0351184c-af60-401b-8292-b936668edb65">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="RIGHT" ratio="0.24539474" folderid="97aefba1-8004-482e-b018-b30d1ec8ecd8" selectionindex="-1" isplaceholder="true" relatedfolderid="org.eclipse.ui.internal.ViewStack@b6a93c" portletconfigorder="" />
+      <portletfolder relationtype="BOTTOM" ratio="0.21006565" folderid="org.eclipse.ui.internal.ViewStack@16e799d" selectionindex="-1" isplaceholder="true" relatedfolderid="97aefba1-8004-482e-b018-b30d1ec8ecd8" portletconfigorder="" />
+      <portletfolder relationtype="BOTTOM" ratio="0.47702408" folderid="org.eclipse.ui.internal.ViewStack@21255b" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@16e799d" portletconfigorder="14a21541-52a9-4217-97db-125b53360f95">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="HEADLESS" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.32212886" folderid="org.eclipse.ui.internal.ViewStack@6df5d6" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@21255b" portletconfigorder="7cb0e6b1-ee75-473c-8eb9-298fa87d8312">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.46153846" folderid="org.eclipse.ui.internal.ViewStack@13032d8" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@6df5d6" portletconfigorder="d8c01ece-a86b-49c6-8a1d-5e64fec4e920">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+      <portletfolder relationtype="BOTTOM" ratio="0.4978903" folderid="org.eclipse.ui.internal.ViewStack@d5d138" selectionindex="0" relatedfolderid="org.eclipse.ui.internal.ViewStack@21255b" portletconfigorder="b74d171f-55b7-4002-a557-1b046c694410">
+        <designconfig descriptionalignment="CENTER" descriptionfontstyle="NORMAL" namealignment="CENTER" inherited="false" descriptionfontsize="8" nameshow="true" headertype="CUSTOM" namefontsize="10" descriptionshow="true" namefontstyle="BOLD" descriptionfontcolor="128,128,128" />
+      </portletfolder>
+    </dashboardlayout>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@6df5d6" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Cassandra Template" bgcolor="236,233,216,255" id="7cb0e6b1-ee75-473c-8eb9-298fa87d8312" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Server Side Response Times (avg/max)" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="10" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="50" showname="true" splitcharts="true" bounds.y.enabled="true" axis.y.show="true" subchartweights="333,333,333" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition aggregation="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="number" groupingvalue="" id="4439ed17-f4f5-42cd-8d38-a7dd3a144d3d" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Cassandra Action - Cassandra Server Action" sourcecolor="RGB(90,196,82,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Server Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Action (Cassandra Server Action;Business Transaction Evaluation/Filter/Grouping Values;Methodname Value)" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Cassandra Action (Cassandra Server Action;Business Transaction Evaluation/Filter/Grouping Values;Methodname Value)" metrickeyid="Value" agentname="" />
+            <displaysourceinfo agenthost="" transactionname="Cassandra Action" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="number" groupingvalue="" id="2d3bd87b-83dd-4853-8cef-2e7464793735" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Cassandra Action - Cassandra Server Action" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Server Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Action (Cassandra Server Action;Business Transaction Evaluation/Filter/Grouping Values;Methodname Value)" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Cassandra Action (Cassandra Server Action;Business Transaction Evaluation/Filter/Grouping Values;Methodname Value)" metrickeyid="Value" agentname="" />
+            <displaysourceinfo agenthost="" transactionname="Cassandra Action" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splittag="Cassandra Server Action" splitmode="Tag" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="624" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="994" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig com.dynatrace.diagnostics.portlets.text.textportletconfig.backgroundstyle="topLeft" sessiontype="live" locationassource="false" unitshown="false" bgcolor="236,233,216,255" id="14a21541-52a9-4217-97db-125b53360f95" shownasinteger="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.alignment="CENTER" invertcolors="true" description="" typeid="com.dynatrace.diagnostics.portlets.text.measure.MeasureText" name="Text and Measurement" ismaster="false" locationascomparesource="false" templatetext="Performance Overview of {0} Cassandra Node(s)" com.dynatrace.diagnostics.portlets.text.textportletconfig.defaultforegroundcolor="RGB(0,0,0,255)" icon="com.dynatrace.diagnostics.sdk/default.gif" usespecificautorefresh="false" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@21255b" usedashboardsource="true" com.dynatrace.diagnostics.portlets.text.textportletconfig.wallpapercolor="RGB(255,255,255,255)" sessionid="Cassandra Template" heightmode="AdjustToFontSize" addfilterinfo="false" onlylastvalue="true" source="server://mkopp" com.dynatrace.diagnostics.portlets.text.textportletconfig.text="">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="13" />
+      <filter>
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="1,1" displayoption="CHART_AND_TABLE" />
+      <font height="14" style="BOLD" name="Arial" />
+      <chartsource position="-1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Last" uiunit="number" groupingvalue="" id="cd903dae-b1ef-4750-8b62-98c744ad6bcf" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Cassandra Nodes" sourcecolor="RGB(0,128,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="Measure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+        <lightweightuniquemeasureidentifier keyid="Cassandra Nodes" metricgroupkey="Availability" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Cassandra Nodes" metrickeyid="Connected Agents" agentname="" />
+        <displaysourceinfo />
+      </chartsource>
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@d5d138" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Cassandra Template" bgcolor="236,233,216,255" id="b74d171f-55b7-4002-a557-1b046c694410" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Client Side Times (avg/max)" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="7" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="50" showname="true" splitcharts="true" bounds.y.enabled="true" axis.y.show="true" subchartweights="200" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition unit="true" splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Avg" uiunit="number" groupingvalue="" id="d62ef8e1-97fb-431f-ad3a-bb6f217268bf" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Cassandra Client Only - Cassandra Client Action" sourcecolor="RGB(90,196,82,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Client Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Client Only (Cassandra Client Action;Business Transaction Evaluation/Filter/Grouping Values;Methodname Value)" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Cassandra Client Only (Cassandra Client Action;Business Transaction Evaluation/Filter/Grouping Values;Methodname Value)" metrickeyid="Value" agentname="" />
+            <displaysourceinfo agenthost="" transactionname="Cassandra Client Only" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Max" uiunit="number" groupingvalue="" id="443d095e-8b38-4406-922e-4ad50e360a37" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Cassandra Client Only - Cassandra Client Action" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Client Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Client Only (Cassandra Client Action;Business Transaction Evaluation/Filter/Grouping Values;Methodname Value)" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Cassandra Client Only (Cassandra Client Action;Business Transaction Evaluation/Filter/Grouping Values;Methodname Value)" metrickeyid="Value" agentname="" />
+            <displaysourceinfo agenthost="" transactionname="Cassandra Client Only" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splittag="Cassandra Client Action" splitmode="Tag" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="590" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="266" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="true" hidden="false" width="869" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@15f788" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Cassandra Template" bgcolor="236,233,216,255" id="0351184c-af60-401b-8292-b936668edb65" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Active and Pending Tasks" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="16" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="StackedBarChart" resolution="1min" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" subchartweights="200" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="3" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="a4143759-3b8c-4d14-8fc0-80211156dee0" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Request.ActiveCount" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="JmxMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Request.ActiveCount" metricgroupkey="Cassandra Basics" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Request.ActiveCount" metrickeyid="Request.ActiveCount" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="2" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="d3079eb2-5c2f-4218-a70b-0374f8680e56" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Internal.PendingTasks" sourcecolor="RGB(90,196,82,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="JmxMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Internal.PendingTasks" metricgroupkey="Cassandra Basics" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Internal.PendingTasks" metrickeyid="Internal.PendingTasks" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="4" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="f72910fc-87a4-47eb-9a82-15ba9442bd75" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Request.PendingTasks" sourcecolor="RGB(242,134,10,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="JmxMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Request.PendingTasks" metricgroupkey="Cassandra Basics" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Request.PendingTasks" metrickeyid="Request.PendingTasks" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="number" groupingvalue="" id="7b887ead-9f2e-4438-a19d-f07f8d93e677" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Internal.ActiveCount" sourcecolor="RGB(74,103,232,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="JmxMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Internal.ActiveCount" metricgroupkey="Cassandra Basics" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Internal.ActiveCount" metrickeyid="Internal.ActiveCount" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="105" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@13032d8" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Cassandra Template" bgcolor="236,233,216,255" id="d8c01ece-a86b-49c6-8a1d-5e64fec4e920" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Server Side Load" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="11" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="StepChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="true" bounds.y.enabled="true" axis.y.show="true" subchartweights="333,333,333" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="ab2112ac-2357-4b9d-9c38-62520d57826c" aggregationtype="Count" uiunit="number" groupingvalue="" id="0e1b2fa6-f45a-3a90-b028-af5e5d272afd" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Cassandra Action - Count" sourcecolor="RGB(229,116,77,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" unit="count" systemid="Cassandra Template" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Server Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Action - Count" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="-" parentkeyid="Cassandra Action - Count" metrickeyid="Value" agentname="-">
+              <tag value="get_range_slices" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Cassandra Action - Count" measureunit="number" agentname="-" agentgroup="Customer Web Frontend (Java)" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="ab2112ac-2357-4b9d-9c38-62520d57826c" aggregationtype="Count" uiunit="number" groupingvalue="" id="5bbf72b9-be5d-3ac3-a506-b2451760949a" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Cassandra Action - Count" sourcecolor="RGB(13,89,71,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" unit="count" systemid="Cassandra Template" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Server Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Action - Count" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="-" parentkeyid="Cassandra Action - Count" metrickeyid="Value" agentname="-">
+              <tag value="get" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Cassandra Action - Count" measureunit="number" agentname="-" agentgroup="Cassandra" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="random" aggregationtype="Count" uiunit="number" groupingvalue="" id="ab2112ac-2357-4b9d-9c38-62520d57826c" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="true" name="Cassandra Action - Count" sourcecolor="RGB(128,0,192,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" systemid="Cassandra Template" unit="number" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Server Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Action - Count" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Cassandra Action - Count" metrickeyid="Value" agentname="" />
+            <displaysourceinfo agenthost="" transactionname="Cassandra Action - Count" measureunit="number" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="ab2112ac-2357-4b9d-9c38-62520d57826c" aggregationtype="Count" uiunit="number" groupingvalue="" id="29cf51e3-cceb-3f72-bb86-b28dc8eb3b72" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Cassandra Action - Count" sourcecolor="RGB(178,65,26,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" unit="count" systemid="Cassandra Template" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Server Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Action - Count" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="-" parentkeyid="Cassandra Action - Count" metrickeyid="Value" agentname="-">
+              <tag value="batch_mutate" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Cassandra Action - Count" measureunit="number" agentname="-" agentgroup="Cassandra" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="-1" scale="0" visible="true" sessiontype="live" parentid="ab2112ac-2357-4b9d-9c38-62520d57826c" aggregationtype="Count" uiunit="number" groupingvalue="" id="a3d5b388-576e-324c-95cd-573f31f1c356" fetchmeasurecolor="false" overridesource="false" rate="10s" ratesupported="true" name="Cassandra Action - Count" sourcecolor="RGB(13,89,71,255)" sourcetype="MEASURE" dynamicconfig="true" autounit="false" sessionid="Cassandra Template" groupingcriterion="BTSP1" displayrate="10s" unit="count" systemid="Cassandra Template" measuretype="TransactionMeasure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Cassandra Server Action" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Action - Count" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="-" parentkeyid="Cassandra Action - Count" metrickeyid="Value" agentname="-">
+              <tag value="get_slice" type="0" key="BTSP1" />
+            </lightweightuniquemeasureidentifier>
+            <displaysourceinfo agenthost="-" transactionname="Cassandra Action - Count" measureunit="number" agentname="-" agentgroup="Cassandra" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splittag="Cassandra Server Action" splitmode="Tag" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="1017" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@16dd8b5" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Cassandra Template" bgcolor="236,233,216,255" id="029d01c9-eff8-4048-90b2-194080232046" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="Cassandra CPU Load" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="15" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="AreaChart" resolution="Auto" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" subchartweights="200" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="false" showvalues="false" showtitle="false" showlegend="false">
+          <legendcomposition splittings="true" host="true" measure="true" agent="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="1" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Avg" uiunit="percent" groupingvalue="Cassandra" id="f1db7596-c598-4ee1-a5d7-f876ccd1a550" fetchmeasurecolor="true" overridesource="false" rate="10s" ratesupported="false" name="Current CPU load" sourcecolor="RGB(128,192,128,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" groupingcriterion="AgentName" displayrate="10s" systemid="Cassandra Template" unit="percent" measuretype="ProcessPerformanceMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="Current CPU load" metricgroupkey="Process Performance" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Current CPU load" metrickeyid="Current CPU load" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="percent" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="210" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+    <portletconfig usespecificautorefresh="false" icon="com.dynatrace.diagnostics.sdk/default.gif" usedashboardsourceforcompare="true" folderid="org.eclipse.ui.internal.ViewStack@12b00ae" sessiontype="live" locationassource="false" usedashboardsource="true" sessionid="Cassandra Template" bgcolor="236,233,216,255" id="1aed2ab2-4965-4dbc-8865-77bc70a81fd3" addfilterinfo="false" source="server://mkopp" description="" lastvalue="false" name="GC Suspensions and Cassandra Compactions" typeid="com.dynatrace.diagnostics.portlets.chart.Chart" ismaster="false" showabsolutevalues="false" locationascomparesource="false">
+      <reportconfig lines.per.table="100" print.legends="true" enabled="true" levels.per.tree="10" override="false" print.images="true" reportposition="14" />
+      <filter>
+        <criterion completepurepath="true" type="agents" mode="all">
+          <textpattern enabled="true" name="agentname" type="contains" />
+          <textpattern enabled="true" name="agenthost" type="contains" />
+        </criterion>
+        <criterion type="applications" mode="all" />
+        <criterion completepurepath="true" type="hosts" mode="all" />
+        <criterion type="timeframe">
+          <timeframe type="Last 30min" />
+        </criterion>
+        <criterion type="visits">
+          <visitidset visitsidsetsize="0" />
+        </criterion>
+        <inheritancemap />
+      </filter>
+      <autorefreshconfig unit="SECONDS" enabled="true" time="10" />
+      <sashconfig weights="500,500" displayoption="CHART" />
+      <datamodelconfig>
+        <chart maxdisplayitems="10" axis.x.title="" legendposition="Bottom" zoomable="true" showtooltips="true" bounds.y.lower="0.0" charttype="ClusteredBarChart" resolution="1min" isentitymarkable="false" title="" showlabels="true" yaxisalignment="0" showname="true" splitcharts="false" bounds.y.enabled="true" axis.y.show="true" subchartweights="200" orientation="Horizontal" lockyaxis="true" axis.y.title="" axis.y.title.show="true" limititems="false" axis.x.show="true" axis.x.title.show="true" logxaxis="false" showheatfield="true" showvalues="false" showtitle="false" showlegend="true">
+          <legendcomposition measure="true">
+            <pielabelcomposition unit="true" value="true" />
+          </legendcomposition>
+          <chartsource position="2" scale="0" visible="true" sessiontype="live" colorinheritancemode="random" aggregationtype="Sum" uiunit="ms" groupingvalue="" id="bca705d2-a6be-4c8b-9c62-bc4f13615f8f" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="true" name="Cassandra Compaction" sourcecolor="RGB(74,103,232,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" displayrate="10s" systemid="Cassandra Template" unit="ms" measuretype="TransactionMeasure" fetch.dynamic.measures="false" fetchthreshold="false" autoscale="false">
+            <tagtolabel>
+              <taglabelentry value="Compaction ColumnFamily (1.x)" key="BTSP2" />
+              <taglabelentry value="Compaction Keyspace (1.x)" key="BTSP1" />
+            </tagtolabel>
+            <lightweightuniquemeasureidentifier keyid="Cassandra Compaction" metricgroupkey="Business Transaction Results" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="Cassandra Compaction" metrickeyid="Value" agentname="" />
+            <displaysourceinfo agenthost="" transactionname="Cassandra Compaction" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <chartsource position="1" scale="0" visible="false" sessiontype="live" colorinheritancemode="parent" aggregationtype="Sum" uiunit="ms" groupingvalue="Cassandra" id="8062c2fb-64ff-43aa-b1ee-8ba6bcb16725" fetchmeasurecolor="false" overridesource="true" rate="10s" ratesupported="false" name="GC Caused Suspension Time" sourcecolor="RGB(186,42,32,255)" sourcetype="MEASURE" dynamicconfig="false" autounit="false" sessionid="Cassandra Template" groupingcriterion="AgentName" displayrate="10s" systemid="Cassandra Template" unit="ms" measuretype="Measure" fetch.dynamic.measures="true" fetchthreshold="false" autoscale="false">
+            <lightweightuniquemeasureidentifier keyid="GC Caused Suspension Time" metricgroupkey="Java Virtual Machine" collector="" systemid="Cassandra Template" application="" agenthost="" parentkeyid="GC Caused Suspension Time" metrickeyid="GC Caused Suspension Time" agentname="" />
+            <displaysourceinfo agenthost="" measureunit="ms" agentname="" agentgroup="&lt;all-agents&gt;" measurerate="purepath" />
+          </chartsource>
+          <splitconfig splitmode="PerSeries" splitlayout="Horizontal" />
+        </chart>
+        <table drawcolumn="-1" sortcolumn="0" structuremode="measureHierarchy" columnorder="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19">
+          <column index="0" sort="Up" forcevisible="false" hidden="false" width="400" />
+          <column index="1" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="2" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="3" sort="None" forcevisible="false" hidden="false" width="25" />
+          <column index="4" sort="None" forcevisible="false" hidden="false" width="100" />
+          <column index="5" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="6" sort="None" forcevisible="false" hidden="false" width="50" />
+          <column index="7" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="8" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="9" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="10" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="11" sort="None" forcevisible="false" hidden="true" width="75" />
+          <column index="12" sort="None" forcevisible="false" hidden="true" width="100" />
+          <column index="13" sort="None" forcevisible="false" hidden="false" width="158" />
+          <column index="14" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="15" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="16" sort="None" forcevisible="false" hidden="true" width="50" />
+          <column index="17" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="18" sort="None" forcevisible="false" hidden="true" width="150" />
+          <column index="19" sort="None" forcevisible="false" hidden="true" width="150" />
+        </table>
+        <heatfieldconfig smartmeasure="true" filterconfirmed="false" smartserver="true" customevents="true">
+          <incidentrules />
+        </heatfieldconfig>
+      </datamodelconfig>
+      <chartcolors />
+    </portletconfig>
+  </dashboardconfig>
+</dynatrace>
+

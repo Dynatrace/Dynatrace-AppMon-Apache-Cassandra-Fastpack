@@ -7,4 +7,3 @@ Cassandra Clients, Business Transactions a Template Profile and Dashboards.
 
 Find further information in the [dynaTrace community](https://community.compuwareapm.com/community/display/DL/Apache+Cassandra+Fastpack)     
 
-For downloads go to [releases](https://github.com/dynaTrace/Dynatrace-Apache-Cassandra-Fastpack/releases/)
