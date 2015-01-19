@@ -2,7 +2,7 @@
 <!-- ATTENTION - THIS IS AN AUTOMATICALLY GENERATED FILE -->
 <!-- Manual changes can cause severe problems and system instability -->
 <!-- Apply manual changes only if you have received explicit instructions from dynaTrace Support -->
-<dynatrace version="4.1.0.2881">
+<dynatrace version="5.5.0.0">
   <systemprofile sysprofgenerated="false" repositoryaccess="true" description="" capture="true" modifiedby="">
     <technology type="java" />
     <license interactive="false" />
